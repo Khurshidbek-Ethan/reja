@@ -31,7 +31,7 @@ app.get("/",function(req,res){
 res.render("harid");
 });
 app.get('/author',(req,res)=>{
-res.render("author",{ user : user});
+res.render("author",{ user: user});
 });
 
 
