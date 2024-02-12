@@ -1,17 +1,35 @@
-console.log("master")
-// A Task
-
-function main(a,b){
-    let number =0
-    for (let i=0; i<b.length;i++){
-        if(b[i]===a){
-          number++ ;
-        }
+function count_digits(str) {
+  let count = 0;
+  for (let n of str) {
+    if (n >= "0" && n <= "9") {
+      count++;
     }
-    return number
+  }
+  return count;
 }
-let result = main("a","MarhamatTumani")
-console.log(result)
+
+const result = count_digits("ah98mad7al3ie1v");
+console.log(result);
+
+
+
+
+
+
+// console.log("master")
+// // A Task
+
+// function main(a,b){
+//     let number =0
+//     for (let i=0; i<b.length;i++){
+//         if(b[i]===a){
+//           number++ ;
+//         }
+//     }
+//     return number
+// }
+// let result = main("a","MarhamatTumani")
+// console.log(result)
 
 
 
