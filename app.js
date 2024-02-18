@@ -26,11 +26,11 @@ app.set("view engine","ejs");
 app.post("/create-item",(req,res) => {
     console.log('user entered/create-item');
 
- // console.log(req.body);
+ console.log("form post qilyapdi2:",req.body);
  // res.end("success");
  const new_reja =req.body.reja;
  db.collection("plans").insertOne({reja: new_reja},(err,data)=>{
-    console.log(data.ops);
+    console.log("data,ops:",data.ops);
  res.json(data.ops[0]);
 });
 });
@@ -76,7 +76,7 @@ app.get("/",function(req,res){
         console.log(err);
         res.end("something went wrong");
     } else {
-        // console.log(data);
+        console.log("data1:",data);
         res.render("reja",{items:data });
     }
     });
