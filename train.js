@@ -1,22 +1,47 @@
-const checkContent = (a, b) => {
-  const arr = b.split("");
-  const new_arr = [];
-  for (let i = 0; i < arr.length; i++) {
-    let count = 0;
-    if (a.length === arr.length && a.includes(arr[i])) {
-      count++;
-    }
-    new_arr.push(count);
-  }
-  if (new_arr.includes(0)) {
-    return false;
-  } else {
-    return true;
-  }
-};
+const reversed = (str) => {
+  // return a new array of string
+  const array_string = str.split("");
+  console.log(array_string);
 
-const result = checkContent("mitgroup", "groupmti");
-console.log(result);
+  // reverse the string into the created array elements
+  const reversed_arr = array_string.reverse();
+  console.log(reversed_arr);
+
+  // join all the array elements into the string
+  const join_all_arr = reversed_arr.join("-");
+  console.log(join_all_arr);
+
+  // return the reversed string
+  return join_all_arr;
+};
+const result3 = reversed("Hello");
+
+
+
+
+
+
+
+
+// const checkContent = (a, b) => {
+//   const arr = b.split("");
+//   const new_arr = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     let count = 0;
+//     if (a.length === arr.length && a.includes(arr[i])) {
+//       count++;
+//     }
+//     new_arr.push(count);
+//   }
+//   if (new_arr.includes(0)) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// };
+
+// const result = checkContent("mitgroup", "groupmti");
+// console.log(result);
 
 
 
