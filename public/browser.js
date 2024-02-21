@@ -45,7 +45,7 @@ document
 document.addEventListener("click",function(e){
 // console.log(e);
 //delete oper
-// console.log(e.target);
+console.log("functionni:",e.target);
 if(e.target.classList.contains("delete-me")){
   if(confirm("Aniq ochirmoqchimisiz?")){
  axios

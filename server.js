@@ -15,10 +15,11 @@ mongodb.connect(
     (err,client)=>{
     if(err) console.log("ERROR on connection MongoDB",err);
     else{
-        console.log("MongoDB connection succed");
-        // console.log(client);
+        console.log("MongoDB connection succed",client);
+        console.log("client",client);
         module.exports = client;
         const app = require("./app");
+        console.log("app:",app);
 
 
 

@@ -26,8 +26,8 @@ app.set("view engine","ejs");
 app.post("/create-item",(req,res) => {
     console.log('user entered/create-item');
 
- console.log("form post qilyapdi2:",req.body);
- // res.end("success");
+ console.log("form post qilyapdi body:",req.body);
+
  const new_reja =req.body.reja;
  db.collection("plans").insertOne({reja: new_reja},(err,data)=>{
     console.log("data,ops:",data.ops);

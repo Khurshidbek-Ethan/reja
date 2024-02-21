@@ -1,20 +1,60 @@
-const reversed = (str) => {
-  // return a new array of string
-  const array_string = str.split("");
-  console.log(array_string);
+function findDoublers(str) {
+    // Bo'sh qatorni tekshiramiz
+    if (str === "") {
+      return false;
+    }
+    
+    // Harflarni ajratib olish uchun bo'sh qator
+    // ichidagi harflarni arrayga aylantiramiz
+    const letters = str.split("");
+  
+    // Harflarni to'plab borish uchun object yaratamiz
+    const letterCounts = {};
+  
+    // Harflarni sanash
+    letters.forEach(letter => {
+      if (letterCounts[letter]) {
+        letterCounts[letter]++;
+      } else {
+        letterCounts[letter] = 1;
+      }
+    });
+  
+    // Agar har qanday harf kamida 2 marta qatnashgan bo'lsa, true qaytar
+    for (const letter in letterCounts) {
+      if (letterCounts[letter] >= 2) {
+        return true;
+      }
+    }
+  
+    // Boshqa halatlarda, false qaytar
+    return false;
+  }
+  
+  // Masalani tekshirish
+  console.log(findDoublers("hello")); // true
+  console.log(findDoublers("world")); // false
 
-  // reverse the string into the created array elements
-  const reversed_arr = array_string.reverse();
-  console.log(reversed_arr);
 
-  // join all the array elements into the string
-  const join_all_arr = reversed_arr.join("-");
-  console.log(join_all_arr);
 
-  // return the reversed string
-  return join_all_arr;
-};
-const result3 = reversed("Hello");
+
+// const reversed = (str) => {
+//   // return a new array of string
+//   const array_string = str.split("");
+//   console.log(array_string);
+
+//   // reverse the string into the created array elements
+//   const reversed_arr = array_string.reverse();
+//   console.log(reversed_arr);
+
+//   // join all the array elements into the string
+//   const join_all_arr = reversed_arr.join("-");
+//   console.log(join_all_arr);
+
+//   // return the reversed string
+//   return join_all_arr;
+// };
+// const result3 = reversed("Hello");
 
 
 
